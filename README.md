@@ -1,40 +1,52 @@
 # CCW Vietnam Brand Playbook
 
-Bản remake của playbook thương hiệu **Cleveland Cycle Werks Vietnam** với định hướng:
-- UI/UX hiện đại hơn
-- đọc nhanh hơn trên desktop/mobile
-- semantic HTML tốt hơn
-- accessibility và keyboard support tốt hơn
-- vẫn giữ tinh thần thương hiệu gốc: **bold, raw, rider-first**
+Hướng dẫn thương hiệu chính thức của **Cleveland Cycle Werks Vietnam** dưới dạng static site, tối ưu cho việc tra cứu nhanh trên desktop và mobile.
 
 ## Nội dung chính
-- Brand foundation
-- Visual identity
-- Brand personality
-- Voice & tone
-- Content guidelines
-- Channel guidelines
-- Model personalities
-- Do's & Don'ts
-- Quick reference
+- Giới thiệu & mục đích
+- Nền tảng thương hiệu
+- Nhận diện thị giác
+- Cá tính thương hiệu
+- Giọng điệu & ngôn ngữ
+- Nguyên tắc nội dung
+- Kênh truyền thông
+- Dòng xe & cá tính
+- Nên & không nên
+- Tham khảo nhanh
 
-## Cải tiến UI/UX
-- Sticky top bar + progress indicator
-- Sidebar/table of contents dễ scan hơn
-- Search nhanh theo section
-- Hero rõ hierarchy hơn
-- Card, table, downloads, quick reference được tối ưu cho readability
-- Responsive tốt hơn cho mobile/tablet
-- Focus state và reduced motion thân thiện hơn
+## Cấu trúc repo
+- `index.html` — giao diện playbook
+- `styles.css` — hệ thống giao diện và responsive styles
+- `main.js` — điều hướng, search section, reading progress
+- `Logo/` — bộ logo dùng cho digital và in ấn
+- `Typefaces/` — bộ typeface thương hiệu
 
-## Chạy local
-Chỉ cần mở [index.html](./index.html) trong trình duyệt.
+## Tài nguyên đi kèm
+### Logo
+- `Logo/logo ClevelandCyclewerks.svg`
+- `Logo/logo ClevelandCyclewerks@2x.png`
+- `Logo/logo ClevelandCyclewerks@2x.webp`
+- `Logo/logo ClevelandCyclewerks.ai`
+- `Logo/logo ClevelandCyclewerks.eps`
 
-## Deploy GitHub Pages
-Có thể publish trực tiếp từ branch `main` vì đây là static site thuần HTML/CSS/JS.
+### Typefaces
+- `Typefaces/Amboy.zip`
+- `Typefaces/Barlow.zip`
 
-## Ghi chú asset
-Để giữ repo gọn nhẹ ở lần khởi tạo đầu tiên, bản này đang tham chiếu logo gốc qua URL public. Nếu cần, có thể bổ sung bộ asset nội bộ vào repo ở vòng tiếp theo.
+## Cách dùng
+### Mở local
+Chỉ cần mở `index.html` bằng trình duyệt.
 
----
-Built with ❤️ by TECOTEC Marketing + Craft Agent
+### Deploy GitHub Pages
+Repo đã kèm workflow deploy GitHub Pages qua GitHub Actions.
+Mỗi lần push lên `main`, site sẽ được build và deploy tự động.
+
+## Phím tắt và UX
+- `Cmd/Ctrl + K` — focus vào ô tìm section
+- Sidebar TOC — nhảy nhanh giữa các phần
+- Reading progress bar — theo dõi tiến độ đọc
+- Quick reference — xem tóm tắt nhanh cuối tài liệu
+
+## Gợi ý vận hành
+- Dùng tài liệu này khi viết content, duyệt design, onboarding team hoặc brief agency
+- Khi thay đổi brand assets hoặc tone of voice, cập nhật trực tiếp trong repo để toàn team dùng cùng một nguồn
