@@ -255,7 +255,7 @@ button, input { font: inherit; }
   grid-template-columns: 1.3fr 0.9fr;
   gap: 24px;
   align-items: stretch;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 .hero__copy, .hero__panel {
   padding: 30px;
@@ -287,7 +287,7 @@ button, input { font: inherit; }
   padding: 14px;
   border-radius: 18px;
   background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
 }
 .hero__meta span {
   display: block;
@@ -304,7 +304,7 @@ button, input { font: inherit; }
   display: grid;
   grid-template-columns: repeat(4, minmax(0,1fr));
   gap: 14px;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 .mini-card {
   padding: 18px;
@@ -315,7 +315,7 @@ button, input { font: inherit; }
 .mini-card span { display: block; color: var(--text-muted); font-size: 12px; margin-bottom: 6px; }
 
 .section {
-  margin-bottom: 18px;
+  margin-bottom: 24px;
   padding: 28px;
   border-radius: 28px;
   border: 1px solid var(--border);
@@ -382,13 +382,111 @@ table { width: 100%; border-collapse: collapse; }
 th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
 th { color: var(--lime); font-family: var(--font-head); text-transform: uppercase; font-size: 13px; letter-spacing: 0.08em; }
 
+/* Logo card layout */
+.logo-card__inner {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
 .logo-card .logo-preview {
-  width: 180px;
-  margin: 6px 0 18px;
-  padding: 20px;
+  width: 200px;
+  flex-shrink: 0;
+  padding: 24px;
   border-radius: 18px;
   background: #0e0e0e;
+  border: 1px solid var(--border);
 }
+.logo-card__desc { flex: 1; }
+.logo-card__hint {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+/* Download list */
+.download-list {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+.dl-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  transition: 0.2s ease;
+}
+.dl-item:hover {
+  border-color: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+}
+.dl-name {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text-soft);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dl-name small {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: normal;
+}
+.format-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+.fmt-svg { background: rgba(222,255,0,0.15); color: #deff00; }
+.fmt-png { background: rgba(96,165,250,0.15); color: #60a5fa; }
+.fmt-webp { background: rgba(52,211,153,0.15); color: #34d399; }
+.fmt-eps { background: rgba(251,146,60,0.15); color: #fb923c; }
+.fmt-ai  { background: rgba(251,146,60,0.15); color: #fb923c; }
+.fmt-zip { background: rgba(167,139,250,0.15); color: #a78bfa; }
+.dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: 0.2s ease;
+  flex-shrink: 0;
+}
+.dl-btn:hover { border-color: var(--lime); color: var(--lime); }
+.dl-section-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin: 20px 0 10px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
 .button-row { display: flex; gap: 10px; flex-wrap: wrap; }
 .type-demo-head {
   margin-bottom: 16px;
@@ -564,6 +662,9 @@ th { color: var(--lime); font-family: var(--font-head); text-transform: uppercas
     flex-direction: column;
     align-items: flex-start;
   }
+  .logo-card__inner { flex-direction: column; }
+  .logo-card .logo-preview { width: 100%; max-width: 240px; }
+  .dl-name { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
