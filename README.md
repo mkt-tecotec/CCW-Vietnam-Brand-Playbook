@@ -1,5 +1,7 @@
 # CCW Vietnam Brand Playbook
 
+Live site: https://mkt-tecotec.github.io/CCW-Vietnam-Brand-Playbook/
+
 Hướng dẫn thương hiệu chính thức của **Cleveland Cycle Werks Vietnam** dưới dạng static site, tối ưu cho việc tra cứu nhanh trên desktop và mobile.
 
 ## Nội dung chính
