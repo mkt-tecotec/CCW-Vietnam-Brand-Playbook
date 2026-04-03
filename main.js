@@ -3,7 +3,6 @@
   const menuToggle = document.getElementById('menuToggle');
   const sidebar = document.getElementById('sidebar');
   const overlay = document.getElementById('overlay');
-  const searchInput = document.getElementById('sectionSearch');
   const links = Array.from(document.querySelectorAll('.toc-link'));
   const sections = Array.from(document.querySelectorAll('.content-section'));
   const progressBar = document.getElementById('readingProgress');
@@ -50,23 +49,6 @@
     if (current) setActiveLink(current.id);
   };
 
-  const filterSections = (keyword) => {
-    const q = keyword.trim().toLowerCase();
-
-    sections.forEach((section) => {
-      const title = (section.dataset.title || '').toLowerCase();
-      const text = section.textContent.toLowerCase();
-      const match = !q || title.includes(q) || text.includes(q);
-      section.style.display = match ? '' : 'none';
-    });
-
-    links.forEach((link) => {
-      const target = document.querySelector(link.getAttribute('href'));
-      const visible = target && target.style.display !== 'none';
-      link.style.display = visible ? '' : 'none';
-    });
-  };
-
   links.forEach((link) => {
     link.addEventListener('click', () => {
       if (window.innerWidth <= 1100) closeMenu();
@@ -75,7 +57,6 @@
 
   menuToggle?.addEventListener('click', toggleMenu);
   overlay?.addEventListener('click', closeMenu);
-  searchInput?.addEventListener('input', (e) => filterSections(e.target.value));
   backToTop?.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -83,11 +64,6 @@
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeMenu();
-    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
-      e.preventDefault();
-      searchInput?.focus();
-      searchInput?.select();
-    }
   });
 
   window.addEventListener('scroll', () => {
