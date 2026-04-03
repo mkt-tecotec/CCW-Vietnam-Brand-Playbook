@@ -115,26 +115,6 @@ button, input { font: inherit; }
   align-items: center;
   gap: 10px;
 }
-.search-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 290px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.03);
-}
-.search-box svg { width: 18px; height: 18px; color: var(--text-muted); }
-.search-box input {
-  width: 100%;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  color: var(--text);
-}
-.search-box input::placeholder { color: var(--text-muted); }
-
 .icon-button, .ghost-button, .primary-button, .secondary-button {
   display: inline-flex;
   align-items: center;
@@ -649,7 +629,6 @@ th { color: var(--lime); font-family: var(--font-head); text-transform: uppercas
     flex-direction: column;
     align-items: stretch;
   }
-  .search-box { min-width: 0; width: 100%; }
   .topbar { flex-wrap: wrap; }
   .topbar__brand { width: calc(100% - 62px); }
   .hero__copy, .hero__panel, .section { padding: 22px; }
