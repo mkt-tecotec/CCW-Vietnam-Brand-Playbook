@@ -123,6 +123,8 @@ button, input { font: inherit; }
 .icon-button {
   width: 46px;
   height: 46px;
+  flex-direction: column;
+  gap: 0;
   border: 1px solid var(--border);
   background: rgba(255,255,255,0.03);
   color: var(--text);
@@ -495,6 +497,10 @@ th { color: var(--lime); font-family: var(--font-head); text-transform: uppercas
 .personality-grid .trait-card {
   position: relative;
   overflow: hidden;
+  padding: 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
 }
 .personality-grid .trait-card::before {
   content: '';
